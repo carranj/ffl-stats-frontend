@@ -13,6 +13,7 @@ export class LineChartComponent {
   Highcharts: typeof Highcharts = Highcharts;
   chartOptions: Highcharts.Options = {}; // Properly defined and initialized
   private jsonDataUrl = 'assets/mock-data/fantasy-points-all-managers-in-a-season.json';
+  chart: Highcharts.Chart | undefined;
 
   constructor(private http: HttpClient) {}
 
@@ -95,5 +96,25 @@ export class LineChartComponent {
         enabled: false
       }
     };
+
+    // Initialize the chart
+    this.chart = Highcharts.chart('container', this.chartOptions);
+  }
+
+  updateChart(newData: any): void {
+    // Modify chartOptions or seriesData as needed
+    const seriesData: SeriesOptionsType[] = newData.managers.map((manager: string, index: number) => ({
+      name: manager,
+      data: newData.data[index]
+    }));
+
+    if (this.chart) {
+      this.chart.update({
+        title: {
+          text: 'Updated Fantasy Points Over the Season'
+        },
+        series: seriesData
+      });
+    }
   }
 }
