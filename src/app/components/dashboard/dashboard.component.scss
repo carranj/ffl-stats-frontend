@@ -1,0 +1,12 @@
+nav {
+    .fas {
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #9CA3AF; // Tailwind's gray-400 color in Sass
+    }
+  }
+  
+  .bg-gray-800 {
+    background-color: #2D3748; // Tailwind's gray-800 color in Sass
+  }
