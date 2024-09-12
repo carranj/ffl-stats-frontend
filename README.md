@@ -1,6 +1,6 @@
-# Angular Dashboard Application
+# The Gentlemen's League Stats Application
 
-Welcome to the Angular Dashboard Application! This project uses Angular, Tailwind CSS, and Highcharts to create a responsive dashboard with data visualization.
+Welcome to the The Gentlemen's League Stats Application! This project uses Angular, Tailwind CSS, and Highcharts to create a responsive dashboard with data visualization.
 
 ## Table of Contents
 
