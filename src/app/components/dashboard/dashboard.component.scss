@@ -6,7 +6,12 @@ nav {
       color: #9CA3AF; // Tailwind's gray-400 color in Sass
     }
   }
-  
-  .bg-gray-800 {
-    background-color: #2D3748; // Tailwind's gray-800 color in Sass
+
+  .dashboard-nav{
+    position: sticky;
+    top: 0;
+    height: 100vh; /* Full viewport height */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
   }

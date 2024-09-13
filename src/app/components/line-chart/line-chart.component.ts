@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import { SeriesOptionsType } from 'highcharts';
+import ExportingModule from 'highcharts/modules/exporting';
+import ExportDataModule from 'highcharts/modules/export-data';
 import { HttpClient } from '@angular/common/http';
-
+ExportingModule(Highcharts);
+ExportDataModule(Highcharts);
 
 @Component({
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html',
-  styleUrls: ['./line-chart.component.scss']
+  styleUrls: ['./line-chart.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class LineChartComponent {
   Highcharts: typeof Highcharts = Highcharts;
@@ -94,6 +98,17 @@ export class LineChartComponent {
       series: seriesData,
       credits: {
         enabled: false
+      },
+      exporting: {
+        enabled: true,  // Enable exporting
+        buttons: {
+          contextButton: {
+            menuItems: ['downloadJPEG', 'viewData', 'downloadCSV']  // Enable exporting as JPEG, viewing data as table, and exporting CSV
+          }
+        }
+      },
+      lang: {
+        viewData: 'View as Table'
       }
     };
 

@@ -1,0 +1,35 @@
+#container{
+    width: 100%;
+    height: calc(75vh);
+    display: block;
+}
+.highcharts-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    table{
+        width:100%;
+    }
+    th, td {
+        padding: 8px;
+        border: 1px solid #2D2D2D; // Darker border color for dark mode
+        text-align: center;
+        color: #FFFFFF; // Light text color
+      }
+    
+      th {
+        background-color: #16191C; // Darker background color for headers
+        font-weight: bold;
+        color: #FFFFFF; // Header text color
+      }
+    
+      tr {
+        &:nth-child(even) {
+          background-color: #2C2F34; // Alternating row color for dark mode
+        }
+    
+        &:hover {
+          background-color: #3C4045; // Hover effect color for dark mode
+        }
+      }
+    }

@@ -1,1 +1,34 @@
-<app-line-chart>
+<div class="flex">
+  <!-- Sidebar Section -->
+  <aside class="w-64 p-4 h-full overflow-y-auto sticky top-0 dashboard-nav border-r border-[#0086FF]">
+    <div class="text-lg font-semibold mb-4 text-white">Football Stats</div>
+    <ul class="space-y-2">
+      <li><a href="#" class="block text-blue-500 hover:underline">Head to Head</a></li>
+      <li><a href="#" class="block text-blue-500 hover:underline">Streaks</a></li>
+      <li><a href="#" class="block text-blue-500 hover:underline">Top Scores</a></li>
+      <li><a href="#" class="block text-blue-500 hover:underline">Margins</a></li>
+      <li><a href="#" class="block text-blue-500 hover:underline">Weekly</a></li>
+      <li><a href="#" class="block text-blue-500 hover:underline">Belt</a></li>
+    </ul>
+
+    <div class="mt-8 text-lg font-semibold mb-4 text-white">Pickem Stats</div>
+    <ul class="space-y-2">
+      <li><a href="#" class="block text-blue-500 hover:underline">Most Picked</a></li>
+      <li><a href="#" class="block text-blue-500 hover:underline">Least Picked</a></li>
+      <li><a href="#" class="block text-blue-500 hover:underline">Most Accurate</a></li>
+      <li><a href="#" class="block text-blue-500 hover:underline">Least Accurate</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main Content Section -->
+  <div class="flex-1 p-6">
+    <!-- Top Section with Current Statistic Title -->
+    <div class="mb-4">
+      <h1 class="text-3xl font-thin text-white">Team LaSwifty Puta</h1>
+    </div>
+
+    <!-- Chart Section -->
+    <div class="w-full h-96">
+      <app-line-chart></app-line-chart>
+    </div>
+</div>
