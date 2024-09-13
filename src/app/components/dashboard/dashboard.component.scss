@@ -3,15 +3,14 @@ nav {
       transition: color 0.3s ease;
     }
     a:hover {
-      color: #9CA3AF; // Tailwind's gray-400 color in Sass
-    }
+      color: #9CA3AF;
   }
-
-  .dashboard-nav{
-    position: sticky;
-    top: 0;
-    height: 100vh; /* Full viewport height */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-  }
+}
+.dashboard-nav{
+  position: sticky;
+  top: 0;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}

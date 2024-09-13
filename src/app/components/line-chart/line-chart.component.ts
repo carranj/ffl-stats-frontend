@@ -1,9 +1,10 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import { SeriesOptionsType } from 'highcharts';
+import { HttpClient } from '@angular/common/http';
+import { SeasonData } from '../../types/season-data';
 import ExportingModule from 'highcharts/modules/exporting';
 import ExportDataModule from 'highcharts/modules/export-data';
-import { HttpClient } from '@angular/common/http';
+
 ExportingModule(Highcharts);
 ExportDataModule(Highcharts);
 
@@ -13,44 +14,58 @@ ExportDataModule(Highcharts);
   styleUrls: ['./line-chart.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class LineChartComponent {
+export class LineChartComponent implements OnInit {
   Highcharts: typeof Highcharts = Highcharts;
-  chartOptions: Highcharts.Options = {}; // Properly defined and initialized
+  chartOptions: Highcharts.Options = {};
   private jsonDataUrl = 'assets/mock-data/fantasy-points-all-managers-in-a-season.json';
   chart: Highcharts.Chart | undefined;
+  dataByWeek: number[][] = []; // Initialize with empty array
+  dataBySeason: SeasonData[] = []; // Initialize with empty array
+  weeks: string[] = []; // Initialize with empty array
+  seasons: string[] = []; // Initialize with empty array
+  managers: string[] = []; // Initialize with empty array
+  currentView: 'week' | 'season' = 'week';
+  isDataLoaded: boolean = false;
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    this.loadChartData();
-  }
-
-  loadChartData(): void {
+  ngOnInit() {
     this.http.get(this.jsonDataUrl).subscribe((data: any) => {
-      this.initializeChart(data);
+      this.dataByWeek = data.dataByWeek;
+      this.dataBySeason = data.dataBySeason;
+      this.weeks = data.weeks;
+      this.seasons = data.dataBySeason.map((d: SeasonData) => d.season);
+      this.managers = data.managers;
+      this.isDataLoaded = true; 
+      this.updateChart();
     });
   }
 
-  initializeChart(data: any): void {
-    // Ensure data is processed correctly
-    const seriesData: SeriesOptionsType[] = data.managers.map((manager: string, index: number) => ({
+  updateChart() {
+    if (!this.isDataLoaded) return; 
+    const categories = this.currentView === 'week' ? this.weeks : this.seasons;
+    const data = this.currentView === 'week' ? this.dataByWeek : this.dataBySeason.map(season => season.data);
+
+    // Create a series for each manager
+    const series: Highcharts.SeriesOptionsType[] = this.managers.map((manager, index) => ({
       name: manager,
-      data: data.data[index]
+      data: data[index] || [], // Ensure there is data for the manager
+      type: 'line' // Specify the type if needed
     }));
-  
+
     this.chartOptions = {
       chart: {
         type: 'line',
         backgroundColor: '#2e2e2e'
       },
       title: {
-        text: 'Fantasy Points Over the Season',
+        text: this.currentView === 'week' ? 'Weekly Data' : 'Seasonal Data',
         style: {
           color: '#ffffff'
         }
       },
       xAxis: {
-        categories: data.weeks,
+        categories: categories,
         labels: {
           style: {
             color: '#ffffff'
@@ -95,7 +110,7 @@ export class LineChartComponent {
           }
         }
       },
-      series: seriesData,
+      series: series,
       credits: {
         enabled: false
       },
@@ -116,20 +131,8 @@ export class LineChartComponent {
     this.chart = Highcharts.chart('container', this.chartOptions);
   }
 
-  updateChart(newData: any): void {
-    // Modify chartOptions or seriesData as needed
-    const seriesData: SeriesOptionsType[] = newData.managers.map((manager: string, index: number) => ({
-      name: manager,
-      data: newData.data[index]
-    }));
-
-    if (this.chart) {
-      this.chart.update({
-        title: {
-          text: 'Updated Fantasy Points Over the Season'
-        },
-        series: seriesData
-      });
-    }
+  toggleView(view: 'week' | 'season') {
+    this.currentView = view;
+    this.updateChart();
   }
 }
