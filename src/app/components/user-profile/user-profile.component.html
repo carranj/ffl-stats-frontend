@@ -1,10 +1,15 @@
-<div *ngIf="user">
-    <h2>{{ user.name }}</h2>
-    <p><strong>Username:</strong> {{ user.username }}</p>
-    <p><strong>Email:</strong> {{ user.email }}</p>
-    <p><strong>Role:</strong> {{ user.role }}</p>
-    <p><strong>Team Name:</strong> {{ user.teamName }}</p>
-    <p><strong>Bio:</strong> {{ user.bio }}</p>
-    <p><strong>Last Active:</strong> {{ user.lastActive | date:'short' }}</p>
-    <img *ngIf="user.profilePictureUrl" [src]="user.profilePictureUrl" alt="{{ user.name }}'s profile picture" />
+<div *ngIf="user" class="bg-gray-800 text-white p-6 rounded-lg shadow-lg max-w-md mx-auto">
+    <div class="flex items-center space-x-4">
+      <img *ngIf="user.profilePictureUrl" [src]="user.profilePictureUrl" alt="{{ user.name }}'s profile picture"
+           class="w-24 h-24 object-cover rounded-full border-2 border-gray-600">
+      <div>
+        <h2 class="text-2xl font-bold mb-2">{{ user.name }}</h2>
+        <p class="text-lg"><strong>Username:</strong> {{ user.username }}</p>
+        <p class="text-lg"><strong>Email:</strong> {{ user.email }}</p>
+        <p class="text-lg"><strong>Role:</strong> {{ user.role | titlecase }}</p>
+        <p class="text-lg"><strong>Team Name:</strong> {{ user.teamName }}</p>
+        <p class="text-lg"><strong>Bio:</strong> {{ user.bio }}</p>
+        <p class="text-lg"><strong>Last Active:</strong> {{ user.lastActive | date:'short' }}</p>
+      </div>
+    </div>
   </div>

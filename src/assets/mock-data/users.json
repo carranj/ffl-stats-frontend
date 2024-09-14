@@ -8,8 +8,8 @@
     "role": "manager",
     "isActive": true,
     "dateJoined": "2021-01-15T00:00:00Z",
-    "teamName": "Team Jose",
-    "profilePictureUrl": "https://example.com/images/jose.jpg",
+    "teamName": "Team LaPuta Swifty",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Fantasy football enthusiast and team manager.",
     "lastActive": "2024-09-14T12:00:00Z"
   },
@@ -23,7 +23,7 @@
     "isActive": true,
     "dateJoined": "2021-02-20T00:00:00Z",
     "teamName": "Team Ben",
-    "profilePictureUrl": "https://example.com/images/ben.jpg",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Fantasy football strategist with a knack for picking winners.",
     "lastActive": "2024-09-13T15:00:00Z"
   },
@@ -37,7 +37,7 @@
     "isActive": true,
     "dateJoined": "2021-03-10T00:00:00Z",
     "teamName": "Team Larry",
-    "profilePictureUrl": "https://example.com/images/larry.jpg",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Veteran fantasy football player with a competitive edge.",
     "lastActive": "2024-09-14T08:00:00Z"
   },
@@ -51,7 +51,7 @@
     "isActive": true,
     "dateJoined": "2021-04-05T00:00:00Z",
     "teamName": "Team Bobby",
-    "profilePictureUrl": "https://example.com/images/bobby.jpg",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Passionate about fantasy football and sports analytics.",
     "lastActive": "2024-09-12T10:00:00Z"
   },
@@ -65,7 +65,7 @@
     "isActive": true,
     "dateJoined": "2021-05-15T00:00:00Z",
     "teamName": "Team Cody",
-    "profilePictureUrl": "https://example.com/images/cody.jpg",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Fantasy football lover with a focus on team management.",
     "lastActive": "2024-09-11T14:00:00Z"
   },
@@ -79,7 +79,7 @@
     "isActive": true,
     "dateJoined": "2021-06-20T00:00:00Z",
     "teamName": "Team Daniel",
-    "profilePictureUrl": "https://example.com/images/daniel.jpg",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Fantasy football aficionado with a winning strategy.",
     "lastActive": "2024-09-09T16:00:00Z"
   },
@@ -93,7 +93,7 @@
     "isActive": true,
     "dateJoined": "2021-07-25T00:00:00Z",
     "teamName": "Team Jen",
-    "profilePictureUrl": "https://example.com/images/jen.jpg",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Dedicated fantasy football manager with a strategic mindset.",
     "lastActive": "2024-09-14T11:00:00Z"
   },
@@ -107,7 +107,7 @@
     "isActive": true,
     "dateJoined": "2021-08-30T00:00:00Z",
     "teamName": "Team Evan",
-    "profilePictureUrl": "https://example.com/images/evan.jpg",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Analytical fantasy football player with a love for stats.",
     "lastActive": "2024-09-10T13:00:00Z"
   },
@@ -121,7 +121,7 @@
     "isActive": true,
     "dateJoined": "2021-09-12T00:00:00Z",
     "teamName": "Team Stephen",
-    "profilePictureUrl": "https://example.com/images/stephen.jpg",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Admin with a deep understanding of fantasy football.",
     "lastActive": "2024-09-14T09:00:00Z"
   },
@@ -135,7 +135,7 @@
     "isActive": true,
     "dateJoined": "2021-10-18T00:00:00Z",
     "teamName": "Team David",
-    "profilePictureUrl": "https://example.com/images/david.jpg",
+    "profilePictureUrl": "https://picsum.photos/300/300",
     "bio": "Commissioner with a passion for managing fantasy leagues.",
     "lastActive": "2024-09-14T07:00:00Z"
   }
