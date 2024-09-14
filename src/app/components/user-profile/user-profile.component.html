@@ -1,0 +1,10 @@
+<div *ngIf="user">
+    <h2>{{ user.name }}</h2>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Role:</strong> {{ user.role }}</p>
+    <p><strong>Team Name:</strong> {{ user.teamName }}</p>
+    <p><strong>Bio:</strong> {{ user.bio }}</p>
+    <p><strong>Last Active:</strong> {{ user.lastActive | date:'short' }}</p>
+    <img *ngIf="user.profilePictureUrl" [src]="user.profilePictureUrl" alt="{{ user.name }}'s profile picture" />
+  </div>

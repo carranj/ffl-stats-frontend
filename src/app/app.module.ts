@@ -5,9 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { LineChartComponent } from './components/line-chart/line-chart.component';
+import { LineChartComponent } from './charts/line-chart/line-chart.component';
 
-import { HighchartsChartModule } from 'highcharts-angular'; // Import HighchartsChartModule
+import { HighchartsChartModule } from 'highcharts-angular';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { HomeComponent } from './components/home/home.component';
+import { BarChartComponent } from './charts/bar-chart/bar-chart.component'; // Import HighchartsChartModule
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { HighchartsChartModule } from 'highcharts-angular'; // Import Highcharts
     AppComponent,
     NavigationComponent,
     DashboardComponent,
-    LineChartComponent
+    LineChartComponent,
+    UserProfileComponent,
+    HomeComponent,
+    BarChartComponent
   ],
   imports: [
     BrowserModule,

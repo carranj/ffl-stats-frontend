@@ -1,0 +1,208 @@
+[
+    {
+        "manager": "Ben",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 115.7 },
+            { "Week": "Week 02", "Season":2021, "Points": 91.1 },
+            { "Week": "Week 03", "Season":2021, "Points": 96.9 },
+            { "Week": "Week 04", "Season":2021, "Points": 94.88 },
+            { "Week": "Week 05", "Season":2021, "Points": 103.42 },
+            { "Week": "Week 06", "Season":2021, "Points": 61.9 },
+            { "Week": "Week 07", "Season":2021, "Points": 112.72 },
+            { "Week": "Week 08", "Season":2021, "Points": 64.24 },
+            { "Week": "Week 09", "Season":2021, "Points": 110 },
+            { "Week": "Week 10", "Season":2021, "Points": 90.9 },
+            { "Week": "Week 11", "Season":2021, "Points": 88.04 },
+            { "Week": "Week 12", "Season":2021, "Points": 111.06 },
+            { "Week": "Week 13", "Season":2021, "Points": 100.6 },
+            { "Week": "Week 14", "Season":2021, "Points": 121.9 },
+            { "Week": "Week 15", "Season":2021, "Points": 88.92 },
+            { "Week": "Week 16", "Season":2021, "Points": 110.08 }
+        ]
+    },
+    {
+        "manager": "Bob",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 85 },
+            { "Week": "Week 02", "Season":2021, "Points": 126.04 },
+            { "Week": "Week 03", "Season":2021, "Points": 87.5 },
+            { "Week": "Week 04", "Season":2021, "Points": 119.52 },
+            { "Week": "Week 05", "Season":2021, "Points": 93.62 },
+            { "Week": "Week 06", "Season":2021, "Points": 98.52 },
+            { "Week": "Week 07", "Season":2021, "Points": 86.8 },
+            { "Week": "Week 08", "Season":2021, "Points": 74.64 },
+            { "Week": "Week 09", "Season":2021, "Points": 89.42 },
+            { "Week": "Week 10", "Season":2021, "Points": 68.2 },
+            { "Week": "Week 11", "Season":2021, "Points": 85.22 },
+            { "Week": "Week 12", "Season":2021, "Points": 37.3 },
+            { "Week": "Week 13", "Season":2021, "Points": 116.62 },
+            { "Week": "Week 14", "Season":2021, "Points": 116.96 },
+            { "Week": "Week 15", "Season":2021, "Points": 130.34 },
+            { "Week": "Week 16", "Season":2021, "Points": 97.78 }
+        ]
+    },
+    {
+        "manager": "David",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 104.9 },
+            { "Week": "Week 02", "Season":2021, "Points": 114.22 },
+            { "Week": "Week 03", "Season":2021, "Points": 107.52 },
+            { "Week": "Week 04", "Season":2021, "Points": 105.3 },
+            { "Week": "Week 05", "Season":2021, "Points": 82.84 },
+            { "Week": "Week 06", "Season":2021, "Points": 136.14 },
+            { "Week": "Week 07", "Season":2021, "Points": 123.12 },
+            { "Week": "Week 08", "Season":2021, "Points": 117.14 },
+            { "Week": "Week 09", "Season":2021, "Points": 102.46 },
+            { "Week": "Week 10", "Season":2021, "Points": 84.58 },
+            { "Week": "Week 11", "Season":2021, "Points": 103.38 },
+            { "Week": "Week 12", "Season":2021, "Points": 149 },
+            { "Week": "Week 13", "Season":2021, "Points": 80.3 },
+            { "Week": "Week 14", "Season":2021, "Points": 107.68 },
+            { "Week": "Week 15", "Season":2021, "Points": 75.9 },
+            { "Week": "Week 16", "Season":2021, "Points": 107.68 }
+        ]
+    },
+    {
+        "manager": "Jose",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 106.88 },
+            { "Week": "Week 02", "Season":2021, "Points": 110.52 },
+            { "Week": "Week 03", "Season":2021, "Points": 119.6 },
+            { "Week": "Week 04", "Season":2021, "Points": 121 },
+            { "Week": "Week 05", "Season":2021, "Points": 95.28 },
+            { "Week": "Week 06", "Season":2021, "Points": 48.82 },
+            { "Week": "Week 07", "Season":2021, "Points": 93.06 },
+            { "Week": "Week 08", "Season":2021, "Points": 151.34 },
+            { "Week": "Week 09", "Season":2021, "Points": 87.3 },
+            { "Week": "Week 10", "Season":2021, "Points": 86.82 },
+            { "Week": "Week 11", "Season":2021, "Points": 103.18 },
+            { "Week": "Week 12", "Season":2021, "Points": 99.5 },
+            { "Week": "Week 13", "Season":2021, "Points": 103.02 },
+            { "Week": "Week 14", "Season":2021, "Points": 85.94 },
+            { "Week": "Week 15", "Season":2021, "Points": 102.74 },
+            { "Week": "Week 16", "Season":2021, "Points": 112.9 }
+        ]
+    },
+    {
+        "manager": "Kevin",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 126.42 },
+            { "Week": "Week 02", "Season":2021, "Points": 71.3 },
+            { "Week": "Week 03", "Season":2021, "Points": 100.16 },
+            { "Week": "Week 04", "Season":2021, "Points": 91.7 },
+            { "Week": "Week 05", "Season":2021, "Points": 118.56 },
+            { "Week": "Week 06", "Season":2021, "Points": 108.8 },
+            { "Week": "Week 07", "Season":2021, "Points": 92.86 },
+            { "Week": "Week 08", "Season":2021, "Points": 104.86 },
+            { "Week": "Week 09", "Season":2021, "Points": 100.34 },
+            { "Week": "Week 10", "Season":2021, "Points": 68.82 },
+            { "Week": "Week 11", "Season":2021, "Points": 82.94 },
+            { "Week": "Week 12", "Season":2021, "Points": 117.92 },
+            { "Week": "Week 13", "Season":2021, "Points": 68.84 },
+            { "Week": "Week 14", "Season":2021, "Points": 61.06 },
+            { "Week": "Week 15", "Season":2021, "Points": 76.92 },
+            { "Week": "Week 16", "Season":2021, "Points": 107.26 }
+        ]
+    },
+    {
+        "manager": "Larry",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 95.34 },
+            { "Week": "Week 02", "Season":2021, "Points": 161.9 },
+            { "Week": "Week 03", "Season":2021, "Points": 109.78 },
+            { "Week": "Week 04", "Season":2021, "Points": 130.68 },
+            { "Week": "Week 05", "Season":2021, "Points": 94.14 },
+            { "Week": "Week 06", "Season":2021, "Points": 76.58 },
+            { "Week": "Week 07", "Season":2021, "Points": 111.98 },
+            { "Week": "Week 08", "Season":2021, "Points": 52.52 },
+            { "Week": "Week 09", "Season":2021, "Points": 92.04 },
+            { "Week": "Week 10", "Season":2021, "Points": 105.28 },
+            { "Week": "Week 11", "Season":2021, "Points": 142.64 },
+            { "Week": "Week 12", "Season":2021, "Points": 92.54 },
+            { "Week": "Week 13", "Season":2021, "Points": 152.06 },
+            { "Week": "Week 14", "Season":2021, "Points": 84.52 },
+            { "Week": "Week 15", "Season":2021, "Points": 106.66 },
+            { "Week": "Week 16", "Season":2021, "Points": 120.22 }
+        ]
+    },
+    {
+        "manager": "Jen",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 106.9 },
+            { "Week": "Week 02", "Season":2021, "Points": 110.58 },
+            { "Week": "Week 03", "Season":2021, "Points": 73.18 },
+            { "Week": "Week 04", "Season":2021, "Points": 60.08 },
+            { "Week": "Week 05", "Season":2021, "Points": 114 },
+            { "Week": "Week 06", "Season":2021, "Points": 87.28 },
+            { "Week": "Week 07", "Season":2021, "Points": 60.82 },
+            { "Week": "Week 08", "Season":2021, "Points": 82.32 },
+            { "Week": "Week 09", "Season":2021, "Points": 109.16 },
+            { "Week": "Week 10", "Season":2021, "Points": 81.32 },
+            { "Week": "Week 11", "Season":2021, "Points": 94.2 },
+            { "Week": "Week 12", "Season":2021, "Points": 97.52 },
+            { "Week": "Week 13", "Season":2021, "Points": 96.4 },
+            { "Week": "Week 14", "Season":2021, "Points": 108.46 }
+        ]
+    },
+    {
+        "manager": "Steve",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 117.48 },
+            { "Week": "Week 02", "Season":2021, "Points": 159.5 },
+            { "Week": "Week 03", "Season":2021, "Points": 129.04 },
+            { "Week": "Week 04", "Season":2021, "Points": 87.42 },
+            { "Week": "Week 05", "Season":2021, "Points": 103.62 },
+            { "Week": "Week 06", "Season":2021, "Points": 97.88 },
+            { "Week": "Week 07", "Season":2021, "Points": 104.88 },
+            { "Week": "Week 08", "Season":2021, "Points": 78.56 },
+            { "Week": "Week 09", "Season":2021, "Points": 124.3 },
+            { "Week": "Week 10", "Season":2021, "Points": 93.56 },
+            { "Week": "Week 11", "Season":2021, "Points": 77.98 },
+            { "Week": "Week 12", "Season":2021, "Points": 92.58 },
+            { "Week": "Week 13", "Season":2021, "Points": 86.8 },
+            { "Week": "Week 14", "Season":2021, "Points": 100.22 },
+            { "Week": "Week 15", "Season":2021, "Points": 121.66 },
+            { "Week": "Week 16", "Season":2021, "Points": 141.9 }
+        ]
+    },
+    {
+        "manager": "Danny",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 83.04 },
+            { "Week": "Week 02", "Season":2021, "Points": 122.28 },
+            { "Week": "Week 03", "Season":2021, "Points": 156.8 },
+            { "Week": "Week 04", "Season":2021, "Points": 101.54 },
+            { "Week": "Week 05", "Season":2021, "Points": 108.6 },
+            { "Week": "Week 06", "Season":2021, "Points": 81 },
+            { "Week": "Week 07", "Season":2021, "Points": 99.4 },
+            { "Week": "Week 08", "Season":2021, "Points": 112.94 },
+            { "Week": "Week 09", "Season":2021, "Points": 98.98 },
+            { "Week": "Week 10", "Season":2021, "Points": 82.24 },
+            { "Week": "Week 11", "Season":2021, "Points": 89.52 },
+            { "Week": "Week 12", "Season":2021, "Points": 113.18 },
+            { "Week": "Week 13", "Season":2021, "Points": 108.82 },
+            { "Week": "Week 14", "Season":2021, "Points": 127.22 },
+            { "Week": "Week 15", "Season":2021, "Points": 115.26 },
+            { "Week": "Week 16", "Season":2021, "Points": 137.42 }
+        ]
+    },
+    {
+        "manager": "Manuel",
+        "scores": [
+            { "Week": "Week 01", "Season":2021, "Points": 74 },
+            { "Week": "Week 02", "Season":2021, "Points": 57.56 },
+            { "Week": "Week 03", "Season":2021, "Points": 58.68 },
+            { "Week": "Week 04", "Season":2021, "Points": 122.92 },
+            { "Week": "Week 05", "Season":2021, "Points": 79.3 },
+            { "Week": "Week 06", "Season":2021, "Points": 85.94 },
+            { "Week": "Week 07", "Season":2021, "Points": 74.3 },
+            { "Week": "Week 08", "Season":2021, "Points": 76.32 },
+            { "Week": "Week 09", "Season":2021, "Points": 74.2 },
+            { "Week": "Week 10", "Season":2021, "Points": 66.16 },
+            { "Week": "Week 11", "Season":2021, "Points": 78.14 },
+            { "Week": "Week 12", "Season":2021, "Points": 82.02 },
+            { "Week": "Week 13", "Season":2021, "Points": 112.08 },
+            { "Week": "Week 14", "Season":2021, "Points": 93.42 }
+        ]
+    }
+]
