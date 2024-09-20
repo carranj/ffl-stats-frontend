@@ -1,0 +1,96 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table beltChampions {
+    championId SERIAL [primary key]
+    seasonId INTEGER [ref: > seasons.seasonId] // Foreign key referencing the current season
+    userId INTEGER [ref: > users.userId] // Foreign key referencing the current champion
+    startDate TIMESTAMP // the date when the user became champion
+    endDate TIMESTAMP // The date when the user lost the championship (null if current champion)
+  }
+  
+  Table drafts {
+    draftId SERIAL [primary key]
+    seasonId INTEGER [ref: > seasons.seasonId]
+    userId INTEGER [ref: > users.userId]
+    yahooPlayerId VARCHAR(50) // ID from Yahoo API for the player
+    round INTEGER // The round of the draft
+    pick INTEGER // The pick number in that round
+  }
+  
+  Table matchups {
+    matchupId SERIAL [primary key]
+    seasonId INTEGER [ref: > seasons.seasonId]
+    startDate DATE
+    week INTEGER
+    teamA INTEGER [ref: > users.userId]
+    teamB INTEGER [ref: > users.userId]
+    winner INTEGER [ref: > users.userId]
+    teamAScore DECIMAL(5, 2)
+    teamBScore DECIMAL(5, 2)
+  }
+  
+  Table pickems {
+    pickemId SERIAL [primary key]
+    matchupId INTEGER [ref: > matchups.matchupId] // Foreign key referencing matchups
+    userId INTEGER [ref: > users.userId] // Foreign key referencing users
+    predictedWinner INTEGER [ref: > users.userId] // Foreign key referencing the predicted winner (userId)
+  }
+  
+  Table seasonUsers {
+    seasonUserId SERIAL [primary key]
+    seasonId INTEGER [ref: > seasons.seasonId] // Foreign key reference to Seasons
+    userId INTEGER [ref: > users.userId] // Foreign key reference to Users
+  }
+  
+  Table seasons {
+    seasonId SERIAL [primary key]
+    startDate DATE
+    endDate DATE
+  }
+  
+  Table userRankings {
+    rankingId SERIAL [primary key]
+    seasonId INTEGER [ref: > seasons.seasonId] // Foreign key referencing the season
+    userId INTEGER [ref: > users.userId] // Foreign key referencing the user
+    wins INTEGER // Number of wins
+    losses INTEGER // Number of losses
+    finalRank INTEGER // The final ranking (1 for champion, 2 for second place, etc.)
+  }
+  
+  Table userStreaks {
+    streakId SERIAL [primary key]
+    seasonId INTEGER [ref: > seasons.seasonId] // Foreign key referencing the season
+    userId INTEGER [ref: > users.userId] // Foreign key referencing the user
+    winStreaksCount INTEGER // Count of winning streaks
+    lossStreaksCount INTEGER // Count of losing streaks
+  }
+  
+  Table users {
+    userId SERIAL [primary key]
+    username VARCHAR(50) UNIQUE
+    password VARCHAR(255)
+    email VARCHAR(100) UNIQUE
+    firstName VARCHAR(50)
+    lastName VARCHAR(50)
+    role INTEGER [ref: > userRoles.roleId]
+    isActive BOOLEAN
+    dateJoined TIMESTAMP
+    teamName VARCHAR(100)
+    profilePictureUrl VARCHAR(255)
+    bio TEXT
+    lastActive TIMESTAMP
+  }
+  
+  Table userRoles {
+    roleId SERIAL [primary key]
+    roleName VARCHAR(50) UNIQUE
+  }
+  
+  Table weeklyScores {
+    scoreId SERIAL [primary key]
+    seasonId INTEGER [ref: > seasons.seasonId] // Foreign key referencing the season
+    userId INTEGER [ref: > users.userId] // Foreign key referencing the user
+    week INTEGER // The week number
+    score DECIMAL(5, 2) // The score for that week
+  }
