@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as Highcharts from 'highcharts';
-import { HttpClient } from '@angular/common/http';
 import { SeasonData } from '../../types/season-data';
 import ExportingModule from 'highcharts/modules/exporting';
 import ExportDataModule from 'highcharts/modules/export-data';
+import { ChartDataService } from 'src/app/services/chart-data.service';
 
 ExportingModule(Highcharts);
 ExportDataModule(Highcharts);
@@ -11,42 +11,46 @@ ExportDataModule(Highcharts);
 @Component({
   selector: 'app-line-chart',
   templateUrl: './line-chart.component.html',
-  styleUrls: ['./line-chart.component.scss'],
+  styleUrls: ['./line-chart.component.scss'], 
   encapsulation: ViewEncapsulation.None
 })
+
 export class LineChartComponent implements OnInit {
-  Highcharts: typeof Highcharts = Highcharts;
-  chartOptions: Highcharts.Options = {};
-  private jsonDataUrl = 'assets/mock-data/fantasy-points-all-managers-in-a-season.json';
+  highcharts: typeof Highcharts = Highcharts;
+  chartOptions!: Highcharts.Options;
   chart: Highcharts.Chart | undefined;
-  dataByWeek: number[][] = []; // Initialize with empty array
-  dataBySeason: SeasonData[] = []; // Initialize with empty array
-  weeks: string[] = []; // Initialize with empty array
-  seasons: string[] = []; // Initialize with empty array
-  managers: string[] = []; // Initialize with empty array
+  dataByWeek: number[][] = [];
+  dataBySeason: SeasonData[] = [];
+  weeks: string[] = [];
+  seasons: string[] = [];
+  managers: string[] = [];
   currentView: 'week' | 'season' = 'week';
   isDataLoaded: boolean = false;
+  
+  series: Highcharts.SeriesLineOptions[] = this.managers.map((manager, index) => ({
+    type: 'line',
+    name: manager,
+    data: []
+  }));
 
-  constructor(private http: HttpClient) {}
-
+  constructor(private readonly chartDataService: ChartDataService) {}
+  
   ngOnInit() {
-    this.http.get(this.jsonDataUrl).subscribe((data: any) => {
-      this.dataByWeek = data.dataByWeek;
-      this.dataBySeason = data.dataBySeason;
-      this.weeks = data.weeks;
-      this.seasons = data.dataBySeason.map((d: SeasonData) => d.season);
-      this.managers = data.managers;
+    this.chartDataService.getLineChartData().subscribe(res => {
+      this.dataByWeek = res.dataByWeek;
+      this.dataBySeason = res.dataBySeason;
+      this.weeks = res.weeks;
+      this.seasons = res.dataBySeason.map((d: SeasonData) => d.season);
+      this.managers = res.managers;
       this.isDataLoaded = true; 
-      this.updateChart();
+      this.initializeChart();
     });
+
   }
 
-  updateChart() {
-    if (!this.isDataLoaded) return; 
+  initializeChart(){
     const categories = this.currentView === 'week' ? this.weeks : this.seasons;
     const data = this.currentView === 'week' ? this.dataByWeek : this.dataBySeason.map(season => season.data);
-
-    // Create a series for each manager
     const series: Highcharts.SeriesOptionsType[] = this.managers.map((manager, index) => ({
       name: manager,
       data: data[index] || [], // Ensure there is data for the manager
@@ -55,9 +59,10 @@ export class LineChartComponent implements OnInit {
 
     this.chartOptions = {
       chart: {
-        type: 'line',
+        spacingBottom: 0,
         backgroundColor: '#2e2e2e'
       },
+      series: series,
       title: {
         text: this.currentView === 'week' ? 'Weekly Data' : 'Seasonal Data',
         style: {
@@ -110,15 +115,14 @@ export class LineChartComponent implements OnInit {
           }
         }
       },
-      series: series,
       credits: {
         enabled: false
       },
       exporting: {
-        enabled: true,  // Enable exporting
+        enabled: true,
         buttons: {
           contextButton: {
-            menuItems: ['downloadJPEG', 'viewData', 'downloadCSV']  // Enable exporting as JPEG, viewing data as table, and exporting CSV
+            menuItems: ['downloadJPEG', 'viewData', 'downloadCSV']
           }
         }
       },
@@ -126,13 +130,5 @@ export class LineChartComponent implements OnInit {
         viewData: 'View as Table'
       }
     };
-
-    // Initialize the chart
-    this.chart = Highcharts.chart('container', this.chartOptions);
-  }
-
-  toggleView(view: 'week' | 'season') {
-    this.currentView = view;
-    this.updateChart();
   }
 }
