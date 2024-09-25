@@ -6,12 +6,11 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LineChartComponent } from './charts/line-chart/line-chart.component';
-
 import { HighchartsChartModule } from 'highcharts-angular';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { HomeComponent } from './components/home/home.component';
-import { BarChartComponent } from './charts/bar-chart/bar-chart.component'; // Import HighchartsChartModule
-
+import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
+import { HeadToHeadComponent } from './components/dashboard/head-to-head/head-to-head.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,8 @@ import { BarChartComponent } from './charts/bar-chart/bar-chart.component'; // I
     LineChartComponent,
     UserProfileComponent,
     HomeComponent,
-    BarChartComponent
+    BarChartComponent,
+    HeadToHeadComponent
   ],
   imports: [
     BrowserModule,
