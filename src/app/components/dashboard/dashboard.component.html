@@ -3,8 +3,8 @@
   <aside class="w-64 p-4 h-full overflow-y-auto sticky top-0 dashboard-nav border-r border-[#0086FF]">
     <div class="text-lg font-semibold mb-4 text-white">Football Stats</div>
     <ul class="space-y-2">
-      <li><a routerLink="/head-to-head" class="block text-blue-500 hover:underline">Head to Head</a></li>
-      <li><a href="#" class="block text-blue-500 hover:underline">Streaks</a></li>
+      <li><a routerLink="/statistics/head-to-head" class="block text-blue-500 hover:underline">Head to Head</a></li>
+      <li><a routerLink="/statistics/streaks" class="block text-blue-500 hover:underline">Streaks</a></li>
       <li><a href="#" class="block text-blue-500 hover:underline">Top Scores</a></li>
       <li><a href="#" class="block text-blue-500 hover:underline">Margins</a></li>
       <li><a href="#" class="block text-blue-500 hover:underline">Weekly</a></li>
@@ -29,6 +29,6 @@
 
     <!-- Chart Section -->
     <div class="w-full h-96">
-        <app-line-chart></app-line-chart>
+        <router-outlet></router-outlet>
     </div>
 </div>

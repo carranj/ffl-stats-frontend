@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import { SeasonData } from '../../types/season-data';
 import ExportingModule from 'highcharts/modules/exporting';
@@ -16,6 +16,7 @@ ExportDataModule(Highcharts);
 })
 
 export class LineChartComponent implements OnInit {
+  @Input() title?:string;
   highcharts: typeof Highcharts = Highcharts;
   chartOptions!: Highcharts.Options;
   chart: Highcharts.Chart | undefined;
@@ -64,7 +65,7 @@ export class LineChartComponent implements OnInit {
       },
       series: series,
       title: {
-        text: this.currentView === 'week' ? 'Weekly Data' : 'Seasonal Data',
+        text: this.title,
         style: {
           color: '#ffffff'
         }

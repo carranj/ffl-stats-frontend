@@ -15,4 +15,8 @@ export class ChartDataService {
   getBarChartData(): Observable<any> {
     return this.http.get('assets/mock-data/scores.json');
   }
+
+  getWinLossStreaks(): Observable<any>{
+    return this.http.get('assets/mock-data/top-streaks.json')
+  }
 }
