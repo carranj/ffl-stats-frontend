@@ -3,4 +3,18 @@
     top: 0;
     height: 100vh; /* Full viewport height */
     overflow-y: auto;
+    ul{
+      width: 100%;
+      color:#ffffff;
+      li{
+        width:100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding:14px 0;
+        &.active{
+          background-color: #ADD8E6;
+        }
+      }
+    }
   }
